@@ -1,0 +1,38 @@
+@media (max-width:500px) {
+    .main .product ul li {
+        display: block;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        padding-left: 10px;
+    }
+    .main .product .main-card {
+        width: 100%;
+    }
+    .card {
+        width: 205px;
+    }
+    .card .image {
+        height: 200px;
+        width: 205px;
+    }
+    .card .image .front img {
+        height: 150px;
+        width: 150px;
+    }
+    .card .image .back img {
+        height: 150px;
+        width: 150px;
+    }
+    .card .image .quick {
+        width: 205px;
+    }
+    .image:hover .quick {
+        top: 180px;
+        /* display: block; */
+        opacity: 1;
+    }
+    .card .text .rupee {
+        margin-top: -10px;
+        margin-bottom: 0px;
+    }
+}

@@ -1,0 +1,237 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@media (max-width:600px) {
+    .main .product ul li {
+        display: block;
+    }
+}
+
+.main {
+    /* height: 500px; */
+    background: lightblue;
+}
+
+.main .product {
+    /* height: inherit; */
+    width: 90%;
+    /* background-color: lightcoral; */
+    margin: auto;
+}
+
+.main .product p {
+    height: 70px;
+    /* background-color: violet; */
+    text-align: center;
+    line-height: 70px;
+    font-size: 2.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.main .product p span {
+    font-weight: bold;
+}
+
+.main .product ul {
+    /* height: 50px; */
+    background: cornflowerblue;
+    /* display: flex; */
+    line-height: 50px;
+    position: relative;
+}
+
+.main .product ul li {
+    list-style: none;
+    display: inline;
+    padding: 17px 110px;
+    /* background-color: deeppink; */
+    /* position: relative; */
+}
+
+.main .product ul li:hover {
+    background-color: #fc636b;
+}
+
+.main .product ul li a {
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 2px;
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+
+.main .product .main-card {
+    height: 550px;
+    width: 100%;
+    padding-top: 25px;
+    /* background-color: blue; */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    /* opacity: 0; */
+    visibility: hidden;
+    transition: 1s;
+    z-index: -1;
+}
+
+.main .product ul li:hover .main-card {
+    /* opacity: 1; */
+    visibility: visible;
+}
+
+
+/* .main .product .x {
+    opacity: 1;
+} */
+
+.card {
+    /* height: 500px; */
+    width: 290px;
+    background: transparent;
+    box-shadow: 0px 0px 8px gray;
+    margin: 6px;
+    padding-bottom: 20px;
+}
+
+.card .image {
+    background-color: transparent;
+    height: 330px;
+    width: 290px;
+    position: relative;
+}
+
+.card .image .ne {
+    height: 25px;
+    width: 55px;
+    background-color: rgb(235, 91, 91);
+    color: #fff;
+    text-align: center;
+    line-height: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.card .image .front {
+    height: inherit;
+    width: inherit;
+    background-color: rgba(0, 0, 0, .03);
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1s;
+    /* back vadu hidden karva mate hoy backface  */
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+}
+
+.card .image .back {
+    height: inherit;
+    width: inherit;
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1s;
+    backface-visibility: hidden;
+    transform: rotateY(0deg);
+}
+
+.card .image:hover .front {
+    transform: rotateY(0deg);
+}
+
+.card .image:hover .back {
+    transform: rotateY(180deg);
+}
+
+.card .image img {
+    margin-top: 15px
+}
+
+.card .image .quick {
+    height: 50px;
+    width: 290px;
+    background: #000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #fff;
+    text-align: center;
+    line-height: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    /* display: none; */
+    opacity: 0;
+    transition: 1s;
+}
+
+.image:hover .quick {
+    top: 280px;
+    /* display: block; */
+    opacity: 1;
+}
+
+.card .quick:hover {
+    background-color: #2fdab8;
+}
+
+.card .text .blue {
+    text-align: center;
+    margin-top: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: red;
+    font-size: 1.2rem;
+}
+
+.card .text .rupee {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 1.2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 20px;
+}
+
+.card .text .rupee span {
+    margin-left: 20px;
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.card .text .add {
+    height: 40px;
+    width: 80%;
+    background-color: #2fdab8;
+    /* outline-offset maate online aapvu pade to j e outline-offset open thay */
+    outline: 1px solid transparent;
+    outline-offset: 0px;
+    margin: auto;
+    text-align: center;
+    line-height: 40px;
+    transition: .1s;
+}
+
+.card .text .add a {
+    color: #fff;
+    letter-spacing: 1px;
+    font-size: .8rem;
+}
+
+.card .text .add:hover {
+    outline: 5px solid #2fdab8;
+    outline-offset: 6px;
+}
